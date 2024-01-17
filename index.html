@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="ja">
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Noto+Serif+JP:wght@200&family=Raleway:wght@200&display=swap');
+  </style>
+  <link rel="stylesheet" href="css/style.css" />
+  <head>
+    <meta charset="UTF-8" />
+  </head>
+  <header>
+    <h1>Minesweeper</h1>
+  </header>
+  <body>
+    <div id="msg"></div>
+    <table>
+      <tbody id="target"></tbody>
+    </table>
+    <p>
+      <input type="button" value="リセット" onclick="location.reload()"/>
+      <input type="button" value="増加" id="zoukabutton"/>
+      <input type="button" value="減少" id="gensyoubutton"/>
+      <input type="button" value="初期値に戻す" id="defaultbutton"/>
+    </p>
+    <p id="PassageArea"></p>
+    <h2>ルール</h2>
+    <h3>15×15マス(初期値)の盤面に、ランダムに爆弾が設置されています。
+      <br>それぞれのマスは開けることができますが、爆弾の置かれているマスを開けるとゲームオーバーです。
+      <br>爆弾の置かれていないマスを開けたときは、隣接する8方向のマスのいずれかに爆弾がある場合はその個数が表示され、隣接するマスに爆弾が置かれていないときは、それらが自動的に開封されます。
+      <br>爆弾の置かれていないマスをすべて開ければゲームクリアです。
+      <br>上部のボタンを操作することでマスの数を増減させることができ、自分に合った難易度で楽しむことができます。</h3>
+    <h2>操作説明</h2>
+    <h3>左クリック:マスを開封します
+      <br>右クリック:未開封のマスに旗、？を設置します（右クリックする度 🚩→？→無 の順に変化）
+      <br>ダブルクリック:周囲の旗の数と、クリックしたセルに表示されている爆弾数が一致している場合は周囲のセルを全開封します</h3>
+    <h2>操作説明</h2>
+    <h3>リセット:現在の盤面をリセットします
+      <br>増加:マスの数を増加させます(現在の縦マス数+1)×(現在の横マス数+1)
+      <br>減少:マスの数を減少させます(現在の縦マス数-1)×(現在の横マス数-1)
+      <br>初期値に戻す:マス数を初期値の15×15マスに戻します</h3>
+      <script src="main.js" type="text/javascript"></script>
+    </body>
+</html>
