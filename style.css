@@ -1,0 +1,192 @@
+html,
+body {
+  margin: 0;
+  padding: 0;
+  font-family: YuGothic, "Yu Gothic", sans-serif;
+}
+
+.title {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 30px;
+  margin: 0;
+  font-size: 1.5em;
+}
+
+.login-status {
+  font-size: 0.7em; /* 文字を小さくする */
+}
+
+.nav {
+  display: flex;
+  justify-content: center;
+  background-color: #f5f5f5;
+  padding: 10px 0;
+}
+
+.menu-group {
+  display: flex;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.menu-item {
+  flex: 1; /* 均等に配置 */
+  text-align: center;
+}
+
+.menu-item a {
+  position: relative;
+  text-decoration: none;
+  color: #000;
+  font-size: 1.1em;
+  font-weight: bold;
+  padding: 10px 40px; /* 上下10 左右30*/
+  display: inline-block;
+  white-space: nowrap;
+  text-decoration: none;
+}
+
+.menu-item a:before {
+  position: absolute;
+  content: "";
+  width: 0; /* 要素の幅 */
+  height: 4px; /* 要素の太さ */
+  top: 100%; /* 要素の位置（親要素の下） */
+  left: 50%; /* 要素の左端を中央に移動 */
+  transform: translateX(-50%); /* 要素を中央に揃える */
+  border-radius: 3px; /* 要素に丸みを持たせる */
+  background: #e0f3ff; /* 色 */
+  transition: width 0.2s ease-in-out, background-color 0.3s ease-in-out; /* 幅,色が滑らかに変化 */
+}
+
+.menu-item a:hover:before {
+  width: 30px; /* ホバー時の幅を設定 */
+  background: #6cace4;
+}
+
+.banner-image {
+  width: 100%; /* 最大幅を800pxに設定 */
+  margin: auto; /* 中央揃え */
+  display: block;
+}
+
+h2 {
+  text-align: center;
+  margin: 20px 0;
+  font-size: 1.5em;
+  color: #555;
+}
+
+p {
+  line-height: 1.6;
+  margin: 10px 20px;
+}
+
+/* サービス内容と画像の配置 */
+.service-container {
+  display: flex; /* フレックスボックスで横並び */
+  justify-content: space-between; /* 左右に配置 */
+  align-items: center; /* 縦方向の中央揃え */
+  padding: 20px;
+  background-color: #f9f9f9; /* 背景色 */
+}
+
+.services {
+  flex: 1; /* 左側のサービスリストに余白を与える */
+  text-align: center; /* 中央揃え */
+  padding-right: 20px; /* 右側に余白 */
+}
+
+.services h2 {
+  margin-bottom: 15px;
+  font-size: 1.5em;
+  color: #333;
+}
+
+.services ul {
+  list-style: none; /* リストのマーカーを削除 */
+  padding: 0;
+}
+
+.services li {
+  margin-bottom: 10px;
+  font-size: 1.1em;
+  color: #555;
+}
+
+.service-image {
+  flex: 1; /* 画像部分の幅 */
+  text-align: center; /* 画像の中央揃え */
+}
+
+.service-image img {
+  max-width: 100%; /* 画像の最大幅を調整 */
+  height: auto;
+  border-radius: 8px; /* 画像の角を少し丸める */
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* 軽い影をつける */
+}
+
+/* 店舗情報と画像の配置 */
+.store-container {
+  display: flex; /* フレックスボックスで横並び */
+  justify-content: space-between; /* 左右に配置 */
+  align-items: center; /* 縦方向の中央揃え */
+  padding: 20px;
+  background-color: #f4f4f4; /* 背景色 */
+}
+
+.store-image {
+  flex: 1; /* 左側の画像部分 */
+  text-align: center; /* 画像の中央揃え */
+}
+
+.store-image img {
+  max-width: 100%; /* 画像の最大幅を調整 */
+  height: auto;
+  border-radius: 8px; /* 画像の角を少し丸める */
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* 軽い影をつける */
+}
+
+.store-info {
+  flex: 1; /* 右側の情報領域 */
+  text-align: center; /* 右揃え */
+  padding-left: 20px; /* 左側に余白 */
+}
+
+.store-info h2 {
+  margin-bottom: 15px;
+  font-size: 1.5em;
+  color: #333;
+}
+
+.store-info p {
+  margin-bottom: 10px;
+  font-size: 1.1em;
+  color: #555;
+}
+
+.btn-gradient-flat {
+  display: inline-block;
+  padding: 0.5em 1em;
+  text-decoration: none;
+  color: #fff;
+  background-image: linear-gradient(#6795fd 0%, #67ceff 100%);
+  transition: 0.4s;
+}
+
+.btn-gradient-flat:hover {
+  background-image: linear-gradient(#6795fd 0%, #67ceff 70%);
+}
+
+footer {
+  background-color: #635353;
+  color: white;
+  text-align: center;
+  padding: 10px 0;
+  position: relative;
+  bottom: 0;
+  width: 100%;
+}
